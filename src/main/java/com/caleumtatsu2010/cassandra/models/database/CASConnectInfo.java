@@ -1,4 +1,4 @@
-package com.caleumtatsu2010.cassandra.models;
+package com.caleumtatsu2010.cassandra.models.database;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

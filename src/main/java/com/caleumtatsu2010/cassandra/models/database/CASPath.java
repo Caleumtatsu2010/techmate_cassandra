@@ -1,4 +1,4 @@
-package com.caleumtatsu2010.cassandra.path;
+package com.caleumtatsu2010.cassandra.models.database;
 
 public class CASPath {
 	private static String dir = "C:\\stuff\\Projects\\techmate_parent";
