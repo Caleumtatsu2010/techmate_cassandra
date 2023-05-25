@@ -9,16 +9,14 @@ public class CASPath {
 	
 	public static String generatedToken = resourceDir + "GeneratedToken.csv";
 	
-	public static String secureConnectBundle = resourceDir + "secure-connect-cart.zip";
+	public static String secureConnectBundle = resourceDir + "secure-connect-techmate.zip";
 	
-	
-	public static String cart = "cart";
-	
-	public static String user = "user";
+	public static String techmate = "techmate";
 	
 	public static String clientId = "ClientId";
 	public static String clientSecret = "ClientSecret";
 	public static String role = "Role";
 	public static String token = "Token";
+	
 	
 }
