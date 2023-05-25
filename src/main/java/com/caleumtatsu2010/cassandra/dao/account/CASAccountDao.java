@@ -150,10 +150,10 @@ public class CASAccountDao implements CASDao<CASAccount> {
 	public static void main(String[] args) {
 		AstraConnector astraConnector = new AstraConnector();
 		CASAccountDao CASAccountDao = new CASAccountDao(astraConnector, KeySpace.techmate);
-		CASAccountDao.getAll();
+//		CASAccountDao.getAll();
 		
-		CASAccount CASAccount = new CASAccount(UUID.randomUUID(), "test username 2", "test password 2", 20, "active");
-		CASAccountDao.insert(CASAccount);
+//		CASAccount CASAccount = new CASAccount(UUID.randomUUID(), "test username 2", "test password 2", 20, "active");
+//		CASAccountDao.insert(CASAccount);
 
 //		CASAccount CASAccountUpdate = new CASAccount(null,true, DateUtility.getCurrentTimeStamp(), DateUtility.getCurrentTimeStamp(), 55, 5.5, UUID.fromString("f000aa01-0451-4000-b000-000000000000"));
 //		CASAccountDao.update(CASAccountUpdate, UUID.fromString("ff695197-d3e8-4c52-8236-94db485363c8"));

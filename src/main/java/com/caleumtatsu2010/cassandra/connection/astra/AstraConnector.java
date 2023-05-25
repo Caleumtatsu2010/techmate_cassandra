@@ -72,7 +72,7 @@ public class AstraConnector {
 				System.out.println(rowList.get(i).getInt("quantity"));
 				System.out.println(rowList.get(i).getInstant("created_at"));
 				System.out.println(rowList.get(i).getDouble("total_price"));
-				System.out.println(rowList.get(i).getUuid("user_id"));
+				System.out.println(rowList.get(i).getUuid("account_id"));
 			}
 		}
 	}
