@@ -1,4 +1,4 @@
-package com.caleumtatsu2010.cassandra.connection.cqlquery.account;
+package com.caleumtatsu2010.cassandra.models.account;
 
 public class CASAccountQueries {
 	

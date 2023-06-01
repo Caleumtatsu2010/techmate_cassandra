@@ -1,4 +1,4 @@
-package com.caleumtatsu2010.cassandra.models.cart;
+package com.caleumtatsu2010.cassandra.models.cart.item;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

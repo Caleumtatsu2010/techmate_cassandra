@@ -1,4 +1,4 @@
-package com.caleumtatsu2010.cassandra.models.database;
+package com.caleumtatsu2010.cassandra.models.database.astra;
 
 public class CASTokenName {
 	public static String clientId = "ClientId";
