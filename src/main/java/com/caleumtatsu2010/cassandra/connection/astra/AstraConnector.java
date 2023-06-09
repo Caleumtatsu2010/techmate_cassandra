@@ -18,6 +18,7 @@ import java.util.Properties;
 public class AstraConnector {
 	
 	private CASToken casToken = null;
+	private CqlSession session = null;
 	
 	public AstraConnector(String astraTokenPath, String databaseName) {
 		this.casToken = readCASToken(astraTokenPath,databaseName);
@@ -34,18 +35,30 @@ public class AstraConnector {
 	
 	public CqlSession connect(String keyspace)  {
 		// Create the CqlSession object:
-		CqlSession session = CqlSession.builder()
-				.withCloudSecureConnectBundle(Paths.get(CASPath.secureConnectBundle))
-				.withAuthCredentials(casToken.getClientId(), casToken.getClientSecret())
-				.withKeyspace(keyspace)
-				.build();
+		if (this.session == null) {
+			this.session = CqlSession.builder()
+					.withCloudSecureConnectBundle(Paths.get(CASPath.secureConnectBundle))
+					.withAuthCredentials(casToken.getClientId(), casToken.getClientSecret())
+					.withKeyspace(keyspace)
+					.build();
+		}
 		System.out.println("New session is oppened! ");
-		return session;
+		return this.session;
 	}
 	
-	public boolean disconnect(CqlSession session) {
+	public boolean closeSession(CqlSession session) {
 		if (session != null) {
 			session.close();
+			System.out.println("Session closed!. All operation exsiting! ");
+			System.exit(0);
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean disconnect() {
+		if (this.session != null) {
+			this.session.close();
 			System.out.println("Session closed!. All operation exsiting! ");
 			System.exit(0);
 			return true;
