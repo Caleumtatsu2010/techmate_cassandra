@@ -34,8 +34,9 @@ public class AstraConnector {
 	}
 	
 	public CqlSession connect(String keyspace)  {
-		// Create the CqlSession object:
+		// Create the CqlSession object if not exsit:
 		if (this.session == null) {
+			System.out.println("Session is creating............!. Be patient............!. you stupid fuck............!.");
 			this.session = CqlSession.builder()
 					.withCloudSecureConnectBundle(Paths.get(CASPath.secureConnectBundle))
 					.withAuthCredentials(casToken.getClientId(), casToken.getClientSecret())
