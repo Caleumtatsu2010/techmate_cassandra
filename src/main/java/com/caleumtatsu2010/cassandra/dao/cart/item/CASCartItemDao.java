@@ -5,7 +5,7 @@ import com.caleumtatsu2010.cassandra.models.cart.item.CASCartItemQueries;
 import com.caleumtatsu2010.cassandra.dao.CASDao;
 import com.caleumtatsu2010.cassandra.models.cart.item.CASCartItem;
 import com.caleumtatsu2010.cassandra.models.database.CASPath;
-import com.caleumtatsu2010.cassandra.models.database.astra.AstraDatabases;
+import com.caleumtatsu2010.cassandra.models.database.astra.dbList.AstraDatabases;
 import com.datastax.oss.driver.api.core.CqlSession;
 import com.datastax.oss.driver.api.core.cql.BoundStatement;
 import com.datastax.oss.driver.api.core.cql.PreparedStatement;
@@ -72,28 +72,6 @@ public class CASCartItemDao implements CASDao<CASCartItem> {
 		}
 	}
 
-
-//	    @Override
-//    public void insert(Product product) {
-//
-//        Connection connection = null;
-//        PreparedStatement ps = null;
-//        ResultSet rs = null;
-//        try {
-//            connection = connectionUtil.getConn();
-//            ps = connection.prepareStatement(ProductQueries.insertProduct);
-//            String[] productAttr = new String[]{"id", "name", "price", "currency", "discountId",
-//             "quantity", "temp1", "temp2", "temp3", "temp4",
-//              "star", "ratings", "image", "subCategoryId"};
-//            StatementUtil.mapParams(ps, product, productAttr);
-//            ps.executeUpdate();
-//            System.out.println("Data Added Successfully");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        } finally {
-//            ConnectionUtil.closeAll(connection, ps, rs);
-//        }
-	
 	
 	@Override
 	public void update(CASCartItem cartItem, UUID id) {
